@@ -1,0 +1,7 @@
+#Day-2
+total_bill=input("Whats the total bill?")
+split=input("How many people will split the bill?")
+tip=input("Whats the percent of tip you want to leave, 10 12 or 15?")
+tip_calc = 1 + (int(tip))/100
+end = (float(total_bill)*float(tip_calc)) / int(split)
+print(round(end, 2))
