@@ -1,0 +1,75 @@
+#Day 4
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+
+import random
+
+lista=[rock, paper, scissors]
+choice=random.choice(lista)
+userinput=input("Choose 1 for Rock, 2 for Paper, or 3 for Scissors: \n")
+if userinput == "1":
+  print(rock)
+  print("-"*20)
+  if choice == lista[0]:
+    print(rock)
+    print("The computer chose rock too, its a tied game!")
+  elif choice == lista[1]:
+    print(paper)
+    print("The computer chose paper, you lost!")
+  else:
+    print(scissors)
+    print("The computer chose scissors, you win!")
+elif userinput == "2":
+  print(paper)
+  print("-"*20)
+  if choice == lista[0]:
+    print(rock)
+    print("The computer chose rock, you win!")
+  elif choice == lista[1]:
+    print(paper)
+    print("The computer chose paper too, its a tied game!")
+  else:
+    print(scissors)
+    print("The computer chose scissors, you lose!")
+elif userinput == "3":
+  print(scissors)
+  print("-"*20)
+  if choice == lista[0]:
+    print(rock)
+    print("The computer chose rock, you lose!")
+  elif choice == lista[1]:
+    print(paper)
+    print("The computer chose paper, you win!")
+  else:
+    print(scissors)
+    print("The computer chose scissors too, its a tied game!")
+else:
+  print("invalid output")
+
